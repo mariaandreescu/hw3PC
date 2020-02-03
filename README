@@ -1,0 +1,26 @@
+Andreescu Maria Elena - 323CD
+
+README - TEMA 3 PC 
+
+***	Folosesc ca schelet laboratorul de HTTP, care are deja implementate 
+helpers.c, helpers.h, requests.c, requests.h. Am adaugat 3 parametri pentru
+functiile compute_get_requests si compute_post_requests -: cookies, headers
+(pentru header-ul de autentificare) si contentHeader (pentru header-ul 
+Content-Type). De asemenea, am folosit functia get_ip din laboratorul de DNS.
+***
+
+    Functii auxiliare:
+    -- getCookies -> getCookies parseaza raspunsul pentru a cauta cookies; 
+returneaza un string care e concatenarea tuturor cookie-urilor gasite, separate
+prin ";" si trimite acest string la compute_get_requests/compute_post_requests
+pentru a il pune in header-ul Cookie.
+    -- compute_and_send -> compune mesajul si trimite request-ul corespunzator;
+returneaza raspunsul primit. Primeste valorile cheilor din json, gasite prin
+parsarea raspunsului primit anterior si compune, in functie de numarul task-ului,
+valoarea necesara. 
+	
+    In main, pentru fiecare task, parsez raspunsul si iau campurile care imi trebuie.
+Ca parser, am folosit cJSON, deoarece mi s-a parut mai usor de utilizat decat alte
+parsere. Iau valorile corespunzatoare cheilor cerute, folosind
+ori numele cheii, ori campurile din structura cJSON (child si next).
+
