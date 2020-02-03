@@ -1,14 +1,4 @@
-Andreescu Maria Elena - 323CD
+HTTP Treasure Hunt
 
-README - TEMA 3 PC 
-
-***	Folosesc ca schelet laboratorul de HTTP, care are deja implementate 
-helpers.c, helpers.h, requests.c, requests.h.	***
-
-	Task 1:
-		Folosesc IP_SERVER = 185.118.200.35,
-		         PORT_SERVER = 8081,
-			 url : /task1/start.
-	Task 2:
 
 
